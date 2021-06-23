@@ -18,8 +18,9 @@ Default: http://127.0.0.1:1238
 ```
 
 ### Result
-Use the folder 'html' for your web service files
-Inside the folder
+Use the folder "html" for your web service files
+
+Files related to the MySQL will be saved in the folder "mySql"
 
 ### Note
 
