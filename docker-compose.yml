@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  web-server:
+    container_name: webServerBench
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: unless-stopped
+    volumes:
+      - "./html/:/var/www/html/"
+    ports:
+      - "1237:80"
+
+
+  mysql-server:
+    container_name: mySqlBench
+    image: mysql:8.0.19
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - "./mySql/:/var/lib/mysql"
+
+  phpmyadmin:
+    container_name: phpMyAdminBench
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "1238:80"
