@@ -5,9 +5,9 @@ A ready-to-use LAMP stack in Docker to be able to dev. and test with Apache / My
 You want to test or develop a PHP / Apache / MySQL software, but don't want to install a LAMP stack directly on your OS
 
 ### Task
-Clone the repo and start the docker-compose.yml
+- Clone the repo and start the docker-compose.yml
 ```sh
-- docker-compose up
+docker-compose up
 ```
 
 - Create a database
